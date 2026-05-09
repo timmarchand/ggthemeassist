@@ -549,8 +549,7 @@ ggThemeAssist <- function(text){
               family = input$plot.subtitle.family,
               #angle = input$plot.subtitle.angle,
               hjust = input$plot.subtitle.hjust,
-              #vjust = input$plot.subtitle.vjust,
-              lineheight = input$plot.subtitle.lineheight),
+              #vjust = input$plot.subtitle.vjust),
             plot.caption = element_text(
               size = input$plot.caption.size,
               colour = input$plot.caption.colour,
@@ -558,8 +557,7 @@ ggThemeAssist <- function(text){
               family = input$plot.caption.family,
               #angle = input$plot.caption.angle,
               hjust = input$plot.caption.hjust,
-              #vjust = input$plot.caption.vjust,
-              lineheight = input$plot.caption.lineheight)
+              #vjust = input$plot.caption.vjust),
           )
       }
 
