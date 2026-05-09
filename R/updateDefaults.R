@@ -76,5 +76,11 @@ updateDefaults <- function(gg, defaults, linetypes = linetypes) {
 
   # substitute grey with gray
   defaults <- rapply(defaults, function(x) { gsub('grey', 'gray', x) }, how = 'list')
+
+  # Remove unsupported subtitle/caption fields (no UI inputs for these)
+  defaults$plot.subtitle[c('vjust', 'angle', 'lineheight')] <- NULL
+  defaults$plot.caption[c('vjust', 'angle', 'lineheight')] <- NULL
+
+  return(defaults)
   return(defaults)
 }

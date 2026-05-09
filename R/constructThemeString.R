@@ -37,6 +37,7 @@ construcThemeString <- function(theme, original, new, std = default, element = N
   }
 
   if (is.list(std) || length(std) > 1){
+    std <- std[names(std) %in% names(new)]
     DifferentToStandard <- names(std)[!new[names(std)] == std[names(std)]]
     DifferentToStandard <- DifferentToStandard[!is.na(DifferentToStandard)]
     DifferentToStandard <- new[DifferentToStandard]
