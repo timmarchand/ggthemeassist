@@ -604,7 +604,7 @@ ggThemeAssist <- function(text){
         }
 
         result <- formatResult(text = text, themestring = themeResult, labelstring = labelResult, oneline = oneline, formatR = input$formatR)
-        rstudioapi::insertText(result)
+        rstudioapi::insertText(text = result, id = rstudioapi::getSourceEditorContext()$id)
       }
       invisible(stopApp())
     })
