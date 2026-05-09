@@ -448,11 +448,11 @@ ggThemeAssist <- function(text){
           axis.line = element_line(
             linetype = input$axis.line.type,
             colour = input$axis.line.colour,
-            size = input$axis.line.size),
+            linewidth = input$axis.line.size),
           axis.ticks = element_line(
             linetype = input$axis.ticks.type,
             colour = input$axis.ticks.colour,
-            size = input$axis.ticks.size),
+            linewidth = input$axis.ticks.size),
           axis.title = element_text(
             size = input$axis.title.size,
             colour = input$axis.title.colour,
@@ -474,19 +474,19 @@ ggThemeAssist <- function(text){
           plot.background = element_rect(
             fill = input$plot.background.fill,
             colour = input$plot.background.colour,
-            size = input$plot.background.size,
+            linewidth = input$plot.background.size,
             linetype = input$plot.background.linetype
           ),
           panel.background = element_rect(
             fill = input$panel.background.fill,
             colour = input$panel.background.colour,
-            size = input$panel.background.size,
+            linewidth = input$panel.background.size,
             linetype = input$panel.background.linetype
           ),
           strip.background = element_rect(
             fill = input$strip.background.fill,
             colour = input$strip.background.colour,
-            size = input$strip.background.size,
+            linewidth = input$strip.background.size,
             linetype = input$strip.background.linetype
           ),
           strip.text = element_text(
@@ -500,11 +500,11 @@ ggThemeAssist <- function(text){
           panel.grid.major = element_line(
             linetype = input$panel.grid.major.type,
             colour = input$panel.grid.major.colour,
-            size = input$panel.grid.major.size),
+            linewidth = input$panel.grid.major.size),
           panel.grid.minor = element_line(
             linetype = input$panel.grid.minor.type,
             colour = input$panel.grid.minor.colour,
-            size = input$panel.grid.minor.size),
+            linewidth = input$panel.grid.minor.size),
           legend.text = element_text(
             size = input$legend.text.size,
             face = input$legend.text.face,
@@ -520,13 +520,13 @@ ggThemeAssist <- function(text){
           legend.background = element_rect(
             fill = input$legend.background.fill,
             colour = input$legend.background.colour,
-            size = input$legend.background.size,
+            linewidth = input$legend.background.size,
             linetype = input$legend.background.linetype
           ),
           legend.key = element_rect(
             fill = input$legend.key.fill,
             colour = input$legend.key.colour,
-            size = input$legend.key.size,
+            linewidth = input$legend.key.size,
             linetype = input$legend.key.linetype
           ),
           legend.position = (if (input$legend.position == 'XY') {
