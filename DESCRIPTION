@@ -3,9 +3,8 @@ Type: Package
 Title: Add-in to Customize 'ggplot2' Themes
 Version: 0.1.5.9000
 Authors@R: c(
-    person("Calligross", role = c("aut")),
-    person("Tim", "Marchand", role = c("ctb", "cre"), 
-           email = "timmarchand@gmail.com")
+    person("Calligross", family = NULL, role = c("aut")),
+    person("Tim", "Marchand", role = c("ctb", "cre"))
 )
 Description: Rstudio add-in that delivers a graphical interface for editing 'ggplot2' theme elements.
 License: GPL-3
