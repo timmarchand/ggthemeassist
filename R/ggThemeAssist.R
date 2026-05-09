@@ -634,7 +634,7 @@ ggThemeAssistGadget <- function(plot) {
 }
 
 ggThemeAssistAddin <- function() {
-  context <- rstudioapi::getActiveDocumentContext()
+  context <- rstudioapi::getSourceEditorContext()
   text <- context$selection[[1]]$text
   if (nchar(text) == 0) {
     stop('Please highlight a ggplot2 plot before selecting this addin.')
