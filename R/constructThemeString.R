@@ -54,6 +54,8 @@ construcThemeString <- function(theme, original, new, std = default, element = N
 
     if (!is.null(result) && length(result) > 0) {
       result <- addQuotes(result)
+      result <- result[result != '"NULL"']        # patch: filter quoted NULLs
+      if (length(result) == 0) return(NULL)       # patch: bail if nothing left
       if (category == 'labels') {
         result <- paste0(theme, '(', element, '', paste(names(result), ' = ', result, collapse = ', '),')')
       } else {
@@ -63,6 +65,7 @@ construcThemeString <- function(theme, original, new, std = default, element = N
     } else {
       NULL
     }
+
   } else if (length(std) == 1 && class(std) == 'character' && !is.null(new)) {
     if (is.null(original)) {
       original <- ''
