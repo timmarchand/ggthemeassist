@@ -60,7 +60,7 @@ default <- list(
     size = 10,
     face = 'plain',
     colour = 'gray30',
-    hjust = 1
+    hjust = 1,
     vjust = 0.5,
     angle = 0,
     lineheight = 1.1
