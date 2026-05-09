@@ -21,7 +21,7 @@
 #' @name ggThemeAssist
 NULL
 
-ggThemeAssist <- function(text){
+ggThemeAssist <- function(text, source_id = NULL){
 
   SubtitlesSupport <- any(names(formals(ggtitle)) == 'subtitle')
 
@@ -604,7 +604,7 @@ ggThemeAssist <- function(text){
         }
 
         result <- formatResult(text = text, themestring = themeResult, labelstring = labelResult, oneline = oneline, formatR = input$formatR)
-        rstudioapi::insertText(text = result, id = rstudioapi::getSourceEditorContext()$id)
+        rstudioapi::insertText(text = result, id = source_id)
       }
       invisible(stopApp())
     })
@@ -636,8 +636,9 @@ ggThemeAssistGadget <- function(plot) {
 ggThemeAssistAddin <- function() {
   context <- rstudioapi::getSourceEditorContext()
   text <- context$selection[[1]]$text
+  source_id <- context$id  # capture id before gadget launches
   if (nchar(text) == 0) {
     stop('Please highlight a ggplot2 plot before selecting this addin.')
   }
-  ggThemeAssist(text)
+  ggThemeAssist(text, source_id = source_id)
 }
