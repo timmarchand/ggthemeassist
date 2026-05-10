@@ -591,9 +591,7 @@ ggThemeAssist <- function(text, source_id = NULL){
       themeResult <- themeResult[!is.na(themeResult)]
 
       labelResult <- construcThemeString('labs', original = gg_original, new = gg_reactive(), std = default, category = 'labels')
-      cat("themeResult:", length(themeResult), "\n")
-      cat("labelResult:", labelResult, "\n")
-      cat("source_id:", source_id, "\n")
+
       if((!is.null(themeResult) & length(themeResult) > 0) | !is.null(labelResult)) {
         if (!is.null(input$multiline)) {
           if (input$multiline) {
